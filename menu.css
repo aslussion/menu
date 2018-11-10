@@ -4,7 +4,11 @@
   height: 30px;
   border:2px solid blue;
 }
-.menu-nav{display: none;}
+.menu-nav{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s;
+}
 .menuList {
   list-style-type: none;
   margin: 0;
@@ -30,7 +34,10 @@
 /*md,lg*/
 @media (min-width: 992px){
   .menu-header{display: none}
-  .menu-nav{display: block!important;/*for js*/}
+  .menu-nav{
+    max-height: none!important;
+    overflow: visible;
+  }
 
   .menuList{
     display: flex;

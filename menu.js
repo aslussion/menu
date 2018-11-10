@@ -11,12 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //закрытие
     if(menu_nav.classList.contains(classOpen)){
-      menu_nav.style.display='none';
+      menu_nav.style.maxHeight = 0;
       menu_nav.classList.remove(classOpen);
     }
     //открытие
     else{
-      menu_nav.style.display='block';
+      maxH = menu_nav.querySelector('.menuList').offsetHeight;
+      menu_nav.style.maxHeight = maxH+'px';
       menu_nav.classList.add(classOpen);
     }
   };
