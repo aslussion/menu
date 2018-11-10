@@ -1,0 +1,44 @@
+.menu-button{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border:2px solid blue;
+}
+.menu-nav{display: none;}
+.menuList {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+}
+.menuList-item{
+  position: relative;
+  display: block;
+}
+
+.menuList-link {
+  margin: auto;
+  height: 50px;
+  background: silver;
+  color: #fff;
+  text-align: center;
+}
+.menuList-link:hover {
+  background: #595959;
+}
+
+
+/*md,lg*/
+@media (min-width: 992px){
+  .menu-header{display: none}
+  .menu-nav{display: block!important;/*for js*/}
+
+  .menuList{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+  .menuList-link {
+    display: inline-flex;
+    align-items: center;
+  }
+}
