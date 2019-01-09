@@ -30,6 +30,13 @@
   background: #595959;
 }
 
+.menuList-subBtn{display: none;}
+@media (max-width: 991px){
+.menuSubList{
+  max-height: none!important;
+}
+}
+
 
 /*md,lg*/
 @media (min-width: 992px){
@@ -48,4 +55,21 @@
     display: inline-flex;
     align-items: center;
   }
+  .menuSubList{
+    position: absolute;
+    top:100%;
+    left:0;
+    background: white;
+    /*display: none;*/
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+  }
+  .menuSubList--open{
+    /*display: block;*/
+    max-height: none;
+  }
+  
+  .menuList-subBtn{display: inline-block;cursor: pointer;}
 }
